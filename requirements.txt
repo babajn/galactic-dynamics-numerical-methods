@@ -1,0 +1,5 @@
+# Provisional dependencies; versions and optional packages will be confirmed when all notebooks are available.
+numpy
+scipy
+matplotlib
+jupyterlab
