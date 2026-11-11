@@ -310,7 +310,7 @@ order_mass = np.polyfit(np.log(dR_values), np.log(mass_errors), 1)[0]
 $I_n$ と $K_n$ は、それぞれ第1種・第2種の $n$ 次修正 Bessel 関数であり、ここでは $n=0,1$ を使う。
 この式は、Ryden の式(6.149)にある薄い円盤の Hankel 積分を指数円盤について評価した形に対応する。Ryden の図6.6には、その回転曲線が示されている\cite{ryden2025}。
 本付録では式\eqref{eq:appA-disk-rotation}の導出には立ち入らず、比較に使う解析式として扱う。
-Notebook A では \texttt{scipy.special.iv} と \texttt{kv} で関数値を求め、Hankel 積分を直接数値積分する方法は発展課題に残す。
+Notebook A では \texttt{scipy.special.iv} と \texttt{kv} で関数値を求める。Hankel 積分を直接数値積分する方法は本書では扱わない。
 
 比較曲線は、同じ内包質量を球対称分布のものとみなして
 \begin{equation}
