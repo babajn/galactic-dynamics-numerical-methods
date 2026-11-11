@@ -16,8 +16,9 @@ matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from matplotlib.collections import QuadMesh
 
-ROOT = Path(__file__).resolve().parents[1]
-FIG = ROOT / 'textbook' / 'figures'
+REPO_ROOT = Path(__file__).resolve().parents[2]
+BOOK_ROOT = REPO_ROOT / 'textbook'
+FIG = BOOK_ROOT / 'figures'
 FIG.mkdir(exist_ok=True)
 PREFIX = {1:'ryden_ch6_notebook1_', 2:'ryden_ch6_notebook2_', 3:'ryden_ch7_notebook3_', 'C':'ryden_notebookC_', 'B':'ryden_notebookB_', 'A':'ryden_notebookA_'}
 
@@ -43,7 +44,7 @@ def notebook_path(number: int | str) -> Path:
 
     pattern = PREFIX[number] + '*.ipynb'
     searched = []
-    for directory in (ROOT/'notebooks'/'complete',):
+    for directory in (REPO_ROOT/'notebooks'/'complete',):
         searched.append(str(directory))
         if not directory.exists():
             continue
@@ -140,7 +141,7 @@ def tex_number(value: float, fmt: str = '.6e') -> str:
 def write_values(chapter: int | str, run: NotebookRun, values: dict):
     """values maps macro names to (value, format, source description)."""
     folder = f'chap{chapter:02d}' if isinstance(chapter, int) else {'B':'appendixB', 'C':'appendixC', 'A':'appendixA'}[chapter]
-    gen=ROOT/'textbook'/'generated'/folder; gen.mkdir(parents=True,exist_ok=True)
+    gen=BOOK_ROOT/'generated'/folder; gen.mkdir(parents=True,exist_ok=True)
     lines=['% Auto-generated from the distributed notebook. Do not hand-edit.']
     raw={}; origins={}
     for macro,(value,fmt,origin) in values.items():

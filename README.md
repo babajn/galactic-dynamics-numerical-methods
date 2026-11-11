@@ -57,11 +57,11 @@ jupyter lab
 - [frontmatter/](textbook/frontmatter/)、[backmatter/](textbook/backmatter/)：前付と参考文献
 - [figures/](textbook/figures/)：本文に用いる図45点（PDF）
 - [generated/](textbook/generated/)：数値結果とLaTeXマクロ
-- [scripts/](scripts/)：図生成の関連スクリプト（リポジトリのルートに配置）
+- [scripts/](textbook/scripts/)：教科書の図・数値生成スクリプト
 
 XeLaTeXで組版します。ソースのディレクトリ構成を維持した状態で、`textbook/` を作業ディレクトリとして `xelatex main.tex` を実行してください。目次と参照を確定するには複数回の実行が必要です。
 
-図生成スクリプトは `notebooks/complete/` の完全実装版を参照します。図・数値マクロの一括再生成コマンドは `python scripts/generate_all_figures.py` です。実行環境が異なる場合は計算結果や図の差異を検証してください。
+図生成スクリプトは `notebooks/complete/` の完全実装版を参照します。図・数値マクロの一括再生成コマンドは `python textbook/scripts/generate_all_figures.py` です。実行環境が異なる場合は計算結果や図の差異を検証してください。
 
 ## ライセンス
 

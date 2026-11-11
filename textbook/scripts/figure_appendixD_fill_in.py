@@ -12,10 +12,11 @@ matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, FancyArrowPatch, Rectangle
 
-ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "textbook/appendices/appendixD_linear_systems.tex"
-OUT = ROOT / "textbook/figures/appD_sparse_elimination_fillin.pdf"
-REPORT = ROOT / "validation/appendixD_figure_checks.json"
+REPO_ROOT = Path(__file__).resolve().parents[2]
+BOOK_ROOT = REPO_ROOT / "textbook"
+SOURCE = BOOK_ROOT / "appendices/appendixD_linear_systems.tex"
+OUT = BOOK_ROOT / "figures/appD_sparse_elimination_fillin.pdf"
+REPORT = BOOK_ROOT / "generated/appendixD/figure_checks.json"
 
 
 def source_matrix(text: str, label: str) -> list[list[Fraction]]:
@@ -117,7 +118,7 @@ def main() -> None:
     fig.savefig(OUT, metadata={"Title": "Sparse elimination and fill-in", "Creator": "Exact-rational matrix figure", "CreationDate": None, "ModDate": None})
     plt.close(fig)
     report = {
-        "matrix_source": str(SOURCE.relative_to(ROOT)),
+        "matrix_source": str(SOURCE.relative_to(REPO_ROOT)),
         "matrix_labels": ["eq:appD-example", "eq:appD-sparse2d-example"],
         "elimination": "exact rational arithmetic; natural ordering; no row swaps",
         "A": [[str(x) for x in row] for row in A],
@@ -131,6 +132,7 @@ def main() -> None:
         "fill_in_value": str(UB[1][2]),
         "figure_sha256": hashlib.sha256(OUT.read_bytes()).hexdigest(),
     }
+    REPORT.parent.mkdir(parents=True, exist_ok=True)
     REPORT.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps(report, ensure_ascii=False, indent=2))
 
