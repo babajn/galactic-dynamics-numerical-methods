@@ -5,7 +5,8 @@
 銀河力学の具体的な問題を通して、数値積分、有限差分法、常微分方程式の時間積分法を学ぶための教材です。解析解との比較、保存量の診断、格子幅や時間刻みを変えた収束試験を重視します。
 
 - **著者：** 馬場淳一（鹿児島大学・国立天文台）
-- **公開版：** 配布版 v1.2（2026年10月16日、104ページ）
+- **公開PDF・学生用Notebook：** 配布版 v1.2（PDFは104ページ）
+- **LaTeXソース：** 配布版 v1.3（付録E・Fを追加）
 - **対象：** 宇宙流体・重力多体系シミュレーションを学び始める学部生・大学院生
 - **関連する輪講テキスト：** Barbara Ryden, *Celestial and Stellar Dynamics* (2025)
 
@@ -13,7 +14,7 @@
 
 **[銀河力学で学ぶ数値計算法 — 配布版 v1.2（PDF）](docs/galactic_dynamics_numerical_methods_v1.2.pdf)**
 
-PDFは全104ページ。本編3章と付録A〜Dから構成されます。
+公開PDFは全104ページ。本編3章と付録A〜Dから構成されます。**LaTeXソースはv1.3に更新済みですが、公開PDFは引き続きv1.2です。** Notebook内のPDF参照ページもv1.2に対応しています。
 
 ## 目次・Jupyter Notebook
 
@@ -28,6 +29,8 @@ Notebookには**学生用のコード入力版**を収録しています。対�
 | 付録B 軸対称Poisson方程式の数値解法 | 2次元有限差分、疎行列、格子収束 | [Notebook B](notebooks/student/ryden_notebookB_axisymmetric_poisson.ipynb) |
 | 付録C 軸対称・非軸対称ポテンシャル中の軌道 | エピサイクル運動、軌道積分 | [Notebook C](notebooks/student/ryden_notebookC_axisymmetric_nonaxisymmetric_orbits.ipynb) |
 | 付録D 連立一次方程式の解法 | Gauss消去法、LU分解、Jacobi法 | — |
+| 付録E 数学公式集 | 数学公式の参照（v1.3で追加） | — |
+| 付録F 単位換算と物理定数 | SI・cgs単位系、物理・天文定数（v1.3で追加） | — |
 
 **注意：** 学生用Notebookは、本文の掲載コードを入力することを目的としており、未入力のセルには `raise NotImplementedError(...)` が配置されています。**入力しない状態で全セルを実行するとエラーになるのは仕様です。**
 
@@ -50,13 +53,13 @@ jupyter lab
 
 - [main.tex](textbook/main.tex)、[preamble.tex](textbook/preamble.tex)：書籍の構成と設定
 - [chapters/](textbook/chapters/)：第1〜3章
-- [appendices/](textbook/appendices/)：付録A〜D
+- [appendices/](textbook/appendices/)：付録A〜F
 - [frontmatter/](textbook/frontmatter/)、[backmatter/](textbook/backmatter/)：前付と参考文献
 - [figures/](textbook/figures/)：本文に用いる図45点（PDF）
 - [generated/](textbook/generated/)：数値結果とLaTeXマクロ
 - [scripts/](scripts/)：図生成の関連スクリプト（リポジトリのルートに配置）
 
-XeLaTeXで組版します。ソースのディレクトリ構成を維持した状態で、`textbook/` を作業ディレクトリとして `xelatex main.tex` を実行してください。目次と参照を確定するには複数回の実行が必要です。
+XeLaTeXで組版します。ソースのディレクトリ構成を維持した状態で、`textbook/` を作業ディレクトリとして `xelatex main.tex` を実行してください。目次と参照を確定するには複数回の実行が必要です。v1.3の原稿はXeLaTeXで3回の組版を確認済みです（A4、115ページ）。
 
 図生成スクリプトの一部は、公開対象から外した教員用・完全実装版Notebookに依存します。**この公開リポジトリだけで図の一括再生成まで保証するものではありません。**
 
