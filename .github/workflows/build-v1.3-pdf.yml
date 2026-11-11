@@ -2,7 +2,7 @@ name: Build and publish textbook PDF v1.3
 on:
   push:
     branches:
-      - release/v1.3-pdf-and-complete-notebooks
+      - main
     paths:
       - 'textbook/**'
       - '.github/workflows/build-v1.3-pdf.yml'
