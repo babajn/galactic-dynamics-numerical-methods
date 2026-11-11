@@ -3,7 +3,7 @@ from notebook_source import run_notebook, write_values, save_figure
 import numpy as np
 import matplotlib.pyplot as plt
 
-OUT = Path(__file__).resolve().parents[1] / 'figures'
+OUT = Path(__file__).resolve().parents[1] / 'textbook' / 'figures'
 OUT.mkdir(parents=True, exist_ok=True)
 
 from figure_layouts import OI, export_quadrature_diagrams

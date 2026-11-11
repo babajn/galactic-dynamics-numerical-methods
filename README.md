@@ -17,7 +17,7 @@ PDFは全104ページ。本編3章と付録A〜Dから構成されます。
 
 ## 目次・Jupyter Notebook
 
-Notebookには**学生用のコード入力版**を収録しています。対応するコードの掲載ページは [INPUT_MAP.md](INPUT_MAP.md) を参照してください。
+Notebookには**学生用のコード入力版**を収録しています。対応するコードの掲載ページは [INPUT_MAP.md](docs/INPUT_MAP.md) を参照してください。
 
 | 教材 | 主な内容 | 学生用Notebook |
 | --- | --- | --- |
@@ -48,15 +48,15 @@ jupyter lab
 
 教科書を編集・組版するためのソースファイルも公開しています。
 
-- [main.tex](main.tex)、[preamble.tex](preamble.tex)：書籍の構成と設定
-- [chapters/](chapters/)：第1〜3章
-- [appendices/](appendices/)：付録A〜D
-- [frontmatter/](frontmatter/)、[backmatter/](backmatter/)：前付と参考文献
-- [figures/](figures/)：本文に用いる図45点（PDF）
-- [generated/](generated/)：数値結果とLaTeXマクロ
-- [scripts/](scripts/)：図生成の関連スクリプト
+- [main.tex](textbook/main.tex)、[preamble.tex](textbook/preamble.tex)：書籍の構成と設定
+- [chapters/](textbook/chapters/)：第1〜3章
+- [appendices/](textbook/appendices/)：付録A〜D
+- [frontmatter/](textbook/frontmatter/)、[backmatter/](textbook/backmatter/)：前付と参考文献
+- [figures/](textbook/figures/)：本文に用いる図45点（PDF）
+- [generated/](textbook/generated/)：数値結果とLaTeXマクロ
+- [scripts/](scripts/)：図生成の関連スクリプト（リポジトリのルートに配置）
 
-XeLaTeXで組版します。ソースのディレクトリ構成を維持した状態で、リポジトリのルートから `xelatex main.tex` を実行してください。目次と参照を確定するには複数回の実行が必要です。
+XeLaTeXで組版します。ソースのディレクトリ構成を維持した状態で、`textbook/` を作業ディレクトリとして `xelatex main.tex` を実行してください。目次と参照を確定するには複数回の実行が必要です。
 
 図生成スクリプトの一部は、公開対象から外した教員用・完全実装版Notebookに依存します。**この公開リポジトリだけで図の一括再生成まで保証するものではありません。**
 
@@ -68,7 +68,7 @@ XeLaTeXで組版します。ソースのディレクトリ構成を維持した�
 
 **再利用ライセンスは現在未設定です。** Publicリポジトリであることだけでは、第三者による複製・改変・再配布を許諾するものではありません。教材とプログラムのライセンスについては [LICENSE_DECISION.md](LICENSE_DECISION.md) を参照してください。
 
-市販教科書のPDFなど、再配布が許可されていない第三者資料は含まれていません。掲載した図・ソースの権利関係と動作環境に関する確認事項は [PUBLISHING_CHECKLIST.md](PUBLISHING_CHECKLIST.md) にまとめています。
+市販教科書のPDFなど、再配布が許可されていない第三者資料は含まれていません。掲載した図・ソースの権利関係と動作環境に関する確認事項は [PUBLISHING_CHECKLIST.md](docs/PUBLISHING_CHECKLIST.md) にまとめています。
 
 ## お問い合わせ
 

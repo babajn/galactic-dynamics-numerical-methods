@@ -13,8 +13,8 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, FancyArrowPatch, Rectangle
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "appendices/appendixD_linear_systems.tex"
-OUT = ROOT / "figures/appD_sparse_elimination_fillin.pdf"
+SOURCE = ROOT / "textbook/appendices/appendixD_linear_systems.tex"
+OUT = ROOT / "textbook/figures/appD_sparse_elimination_fillin.pdf"
 REPORT = ROOT / "validation/appendixD_figure_checks.json"
 
 
