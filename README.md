@@ -30,9 +30,9 @@ Notebookには**学生用のコード入力版**と、コード・実行結果�
 | 付録A 軸対称円盤の質量積分と回転曲線 | 指数円盤、Mestel円盤、累積積分 | [Notebook A](notebooks/student/ryden_notebookA_exponential_disks.ipynb) | [完全版](notebooks/complete/ryden_notebookA_exponential_disks.ipynb) |
 | 付録B 軸対称Poisson方程式の数値解法 | 2次元有限差分、疎行列、格子収束 | [Notebook B](notebooks/student/ryden_notebookB_axisymmetric_poisson.ipynb) | [完全版](notebooks/complete/ryden_notebookB_axisymmetric_poisson.ipynb) |
 | 付録C 軸対称・非軸対称ポテンシャル中の軌道 | エピサイクル運動、軌道積分 | [Notebook C](notebooks/student/ryden_notebookC_axisymmetric_nonaxisymmetric_orbits.ipynb) | [完全版](notebooks/complete/ryden_notebookC_axisymmetric_nonaxisymmetric_orbits.ipynb) |
-| 付録D 連立一次方程式の解法 | Gauss消去法、LU分解、Jacobi法 | —  — |
-| 付録E 数学公式集 | 数学公式の参照（v1.3で追加） | —  — |
-| 付録F 単位換算と物理定数 | SI・cgs単位系、物理・天文定数（v1.3で追加） | —  — |
+| 付録D 連立一次方程式の解法 | Gauss消去法、LU分解、Jacobi法 | — | — |
+| 付録E 数学公式集 | 数学公式の参照（v1.3で追加） | — | — |
+| 付録F 単位換算と物理定数 | SI・cgs単位系、物理・天文定数（v1.3で追加） | — | — |
 
 **注意：** `notebooks/student/` はコード入力欄を残した演習版です。未入力セルの `raise NotImplementedError(...)` による停止は仕様です。解答例・保存済み出力を確認したい場合は `notebooks/complete/` を利用してください。
 
