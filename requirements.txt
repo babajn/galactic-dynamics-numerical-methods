@@ -1,5 +1,5 @@
-# Packages used to validate the original full-implementation notebooks with Python 3.13.5.
-# For student notebooks, use requirements-student.txt instead.
+# Dependencies for the v1.3 complete notebooks (validated with Python 3.13.5).
+# For v1.3 student notebooks, use requirements-student.txt instead.
 numpy==2.3.5
 scipy==1.17.0
 matplotlib==3.10.8
