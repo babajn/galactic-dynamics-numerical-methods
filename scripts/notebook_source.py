@@ -2,8 +2,7 @@
 
 Figure scripts execute notebook code in a fresh namespace (without a Jupyter
 kernel), export selected figures at plt.show(), and format values from that same
-execution. No physical solver is reimplemented here. Only trusted local
-full-implementation notebooks provided separately should be executed.
+execution. No physical solver is reimplemented here. Only trusted local notebooks under notebooks/complete should be executed.
 """
 from pathlib import Path
 from dataclasses import dataclass
@@ -35,16 +34,16 @@ def notebook_path(number: int | str) -> Path:
 
     Notebook filenames may carry any revision suffix (or none).  The chapter
     prefix is the stable identifier; version strings are deliberately ignored.
-    The sibling ../notebooks/ directory takes precedence over the root notebooks/.
-    Student notebooks (notebooks/student/) are intentionally excluded: they
-    contain unfilled code cells and cannot be used to regenerate figures.
+    Complete notebooks are stored under notebooks/complete/. Student notebooks
+    (notebooks/student/) are intentionally excluded because they contain
+    unfilled code cells and cannot be used to regenerate figures.
     """
     if number not in PREFIX:
         raise ValueError(f'Unknown notebook number: {number}')
 
     pattern = PREFIX[number] + '*.ipynb'
     searched = []
-    for directory in (ROOT.parent/'notebooks', ROOT/'notebooks'):
+    for directory in (ROOT/'notebooks'/'complete',):
         searched.append(str(directory))
         if not directory.exists():
             continue
@@ -60,7 +59,7 @@ def notebook_path(number: int | str) -> Path:
 
     raise FileNotFoundError(
         f'Notebook {number} not found. Expected one file matching {pattern!r} '
-        f'in one of: {", ".join(searched)}. The full-implementation notebooks are not public.'
+        f'in one of: {", ".join(searched)}. The complete notebooks are required for figure generation.'
     )
 
 def save_figure(fig, name: str):
