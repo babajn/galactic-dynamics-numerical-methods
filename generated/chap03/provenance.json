@@ -1,0 +1,24 @@
+{
+  "notebook": "ryden_ch7_notebook3_spherical_orbits.ipynb",
+  "code_sha256": "995b8dad4fba595c55bc82e108c3c2c39f3db6c8095f7a1fb859e66e06b64718",
+  "value_sources": {
+    "chthreeOmegaPlummer": "Omega0",
+    "chthreeVcPlummer": "vc0",
+    "chthreePeriodPlummer": "T0",
+    "chthreeOrderEuler": "orders[Euler]",
+    "chthreeOrderLeapfrog": "orders[Leapfrog]",
+    "chthreeOrderRKFour": "orders[RK4]",
+    "chthreeLongEnergyLeapfrog": "long_results[Leapfrog][-1]",
+    "chthreeLongEnergyRKFour": "long_results[RK4][-1]",
+    "chthreeShortMaxEnergyEuler": "short_max_errors[Euler][energy]",
+    "chthreeShortMaxLzEuler": "short_max_errors[Euler][Lz]",
+    "chthreeShortMaxEnergyLeapfrog": "short_max_errors[Leapfrog][energy]",
+    "chthreeShortMaxLzLeapfrog": "short_max_errors[Leapfrog][Lz]",
+    "chthreeShortMaxEnergyRKFour": "short_max_errors[RK4][energy]",
+    "chthreeShortMaxLzRKFour": "short_max_errors[RK4][Lz]",
+    "chthreeLongEarlyMaxLeapfrog": "long_max_errors[Leapfrog][early], same long run to 20T0",
+    "chthreeLongMaxLeapfrog": "long_max_errors[Leapfrog][all], same long run to 1000T0",
+    "chthreeLongEarlyMaxRKFour": "long_max_errors[RK4][early], same long run to 20T0",
+    "chthreeLongMaxRKFour": "long_max_errors[RK4][all], same long run to 1000T0"
+  }
+}

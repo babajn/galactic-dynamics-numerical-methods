@@ -1,0 +1,12 @@
+{
+  "notebook": "ryden_notebookB_axisymmetric_poisson.ipynb",
+  "code_sha256": "da6c98661d573d9b2aa2114c5511321890c0d492440a393294923866776d8a7a",
+  "value_sources": {
+    "appBOrderTwoD": "order_2d",
+    "appBNUnknown": "A_mn.shape[0]",
+    "appBNNZ": "A_mn.nnz",
+    "appBMatrixDensity": "A_mn.nnz / shape[0]**2",
+    "appBPhiError": "err_phi",
+    "appBResidual": "max(abs(residual))"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "chthreeOmegaPlummer": 0.5946035575013605,
+  "chthreeVcPlummer": 0.5946035575013605,
+  "chthreePeriodPlummer": 10.567016002364246,
+  "chthreeOrderEuler": 0.9905690587075667,
+  "chthreeOrderLeapfrog": 2.0002166069354965,
+  "chthreeOrderRKFour": 4.038311600413395,
+  "chthreeLongEnergyLeapfrog": -0.00014977794121620702,
+  "chthreeLongEnergyRKFour": -0.003947600280676364,
+  "chthreeShortMaxEnergyEuler": 0.8146911679639843,
+  "chthreeShortMaxLzEuler": 3.293360461882957,
+  "chthreeShortMaxEnergyLeapfrog": 0.0002654607105049807,
+  "chthreeShortMaxLzLeapfrog": 5.3043988954313036e-15,
+  "chthreeShortMaxEnergyRKFour": 2.458287972971913e-06,
+  "chthreeShortMaxLzRKFour": 3.9996859463937226e-06,
+  "chthreeLongEarlyMaxLeapfrog": 0.0010547931385837322,
+  "chthreeLongMaxLeapfrog": 0.0010547946527986569,
+  "chthreeLongEarlyMaxRKFour": 7.822272643236357e-05,
+  "chthreeLongMaxRKFour": 0.003947600280676364
+}

@@ -1,0 +1,13 @@
+{
+  "notebook": "ryden_notebookA_exponential_disks.ipynb",
+  "code_sha256": "4a987331d33af10d2afd8a894ed0b06bb9e56aadceba6f28888639042f071bbc",
+  "value_sources": {
+    "appAMassRmaxNum": "M_num[-1]/Md",
+    "appAMassRmaxExact": "M_exact[-1]/Md",
+    "appAMassOrder": "order_mass",
+    "appADiskPeakR": "Rpeak_disk/Rd",
+    "appASphPeakR": "Rpeak_sph/Rd",
+    "appADiskPeakVTwo": "vc2peak_disk/scale_v2",
+    "appASphPeakVTwo": "vc2peak_sph/scale_v2"
+  }
+}

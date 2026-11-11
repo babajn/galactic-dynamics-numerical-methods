@@ -1,0 +1,174 @@
+% ------------------------------------------------------------
+% Preamble for 「銀河力学で学ぶ数値計算法」
+% Style guide v1.1: A4, derivation-centered, restrained emphasis.
+% Compile with XeLaTeX.
+% ------------------------------------------------------------
+\usepackage[a4paper,inner=27mm,outer=22mm,top=22mm,bottom=25mm,
+  headheight=14pt,headsep=6mm]{geometry}
+
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{graphicx,float,caption}
+\captionsetup{font=small,labelfont=bf,labelsep=quad}
+\graphicspath{{figures/}{./}}
+
+\usepackage{fontspec}
+\usepackage{xeCJK}
+\IfFontExistsTF{Latin Modern Roman}{\setmainfont{Latin Modern Roman}}{\setmainfont{Liberation Serif}}
+\IfFontExistsTF{Latin Modern Sans}{\setsansfont{Latin Modern Sans}}{\setsansfont{Liberation Sans}}
+\IfFontExistsTF{DejaVu Sans Mono}{\setmonofont{DejaVu Sans Mono}[Scale=0.91]}{}
+\setCJKmainfont{Noto Serif CJK JP}[ItalicFont={Noto Serif CJK JP}]
+\setCJKsansfont{Noto Sans CJK JP}
+\setCJKmonofont{Noto Sans Mono CJK JP}[Scale=0.90]
+\xeCJKsetup{CJKmath=true}
+\XeTeXlinebreaklocale "ja"
+\XeTeXlinebreakskip = 0pt plus 0.1pt minus 0.01pt
+
+\usepackage{xcolor,enumitem,array,booktabs,tabularx,xurl}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,positioning,patterns,decorations.pathreplacing,matrix}
+\usepackage[most]{tcolorbox}
+\usepackage{fancyvrb}
+% Code blocks in Listing and Notebook excerpts use line numbers for discussion in class.
+\fvset{numbers=left,numbersep=5pt,firstnumber=1,stepnumber=1}
+\renewcommand{\theFancyVerbLine}{\sffamily\scriptsize\color{graytext}\arabic{FancyVerbLine}}
+\usepackage{titlesec,fancyhdr}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0.15em}
+\linespread{1.08}
+\raggedbottom
+\emergencystretch=1.5em
+\widowpenalty=10000
+\clubpenalty=10000
+
+% --- Color system inherited from the simulation text, with restrained accents.
+\definecolor{navy}{HTML}{0D1B3E}
+\definecolor{cyan}{HTML}{1F6390}
+\definecolor{cyanbg}{HTML}{E7F0F7}
+\definecolor{turquoise}{HTML}{3A8F9B}
+\definecolor{turquoisebg}{HTML}{EDF7F8}
+\definecolor{amber}{HTML}{A8680B}
+\definecolor{amberbg}{HTML}{FFF2CF}
+\definecolor{rule}{HTML}{C9D2E3}
+\definecolor{graytext}{HTML}{555555}
+\definecolor{listingbg}{HTML}{F7F8FA}
+\definecolor{listingframe}{HTML}{B8C0CC}
+
+% --- Chapter-opening learning box: only full-width pedagogical box used routinely.
+\newtcolorbox{learningbox}[1][本章で学ぶこと]{
+  enhanced,breakable,
+  colback=cyanbg,colframe=cyan,boxrule=0.65pt,arc=1.5pt,
+  left=3mm,right=3mm,top=2.2mm,bottom=2.2mm,
+  colbacktitle=cyan,coltitle=white,fonttitle=\sffamily\bfseries,
+  title={#1},before skip=5pt,after skip=8pt}
+
+% --- Kouya-inspired thin box: only for definitions/theorems with independent meaning.
+\newtcolorbox{definitionbox}[2][]{
+  enhanced,breakable,
+  colback=white,colframe=turquoise,boxrule=0.6pt,arc=0pt,
+  left=3mm,right=3mm,top=5.5mm,bottom=2.2mm,
+  before skip=7pt,after skip=7pt,
+  overlay unbroken and first={
+    \node[anchor=north west,fill=turquoise,text=white,
+      font=\sffamily\bfseries\small,inner xsep=2.2mm,inner ysep=0.8mm]
+      at (frame.north west) {#2};
+  },#1}
+
+% --- Scoped supplements: white background + left rule only.
+\newtcolorbox{notebookblock}[1]{
+  enhanced,breakable,frame hidden,boxrule=0pt,arc=0pt,
+  colback=white,borderline west={2.2pt}{0pt}{turquoise},
+  left=3.2mm,right=3mm,top=5.3mm,bottom=2mm,
+  before skip=8pt,after skip=8pt,
+  title={Notebook #1},
+  coltitle=turquoise,colbacktitle=white,
+  fonttitle=\sffamily\bfseries\small,
+  boxed title style={boxrule=0pt,frame hidden,colback=white},
+  attach boxed title to top left={xshift=0mm,yshift=-0.5mm}}
+
+\newtcolorbox{cautionblock}[1]{
+  enhanced,frame hidden,boxrule=0pt,arc=0pt,
+  colback=white,borderline west={2.2pt}{0pt}{amber},
+  left=3.2mm,right=3mm,top=5.3mm,bottom=2mm,
+  before skip=8pt,after skip=8pt,
+  title={数値計算上の注意｜#1},
+  coltitle=amber,colbacktitle=white,
+  fonttitle=\sffamily\bfseries\small,
+  boxed title style={boxrule=0pt,frame hidden,colback=white},
+  attach boxed title to top left={xshift=0mm,yshift=-0.5mm}}
+
+% 本編の理解には必須でない関連手法を、補足として紹介する。
+% 白背景と青い左線のみ。長い補足は必要に応じてページをまたいで表示する。
+\newtcolorbox{topicblock}[1]{
+  enhanced,breakable,
+  frame hidden,boxrule=0pt,arc=0pt,
+  colback=white,borderline west={2.2pt}{0pt}{cyan},
+  left=3.2mm,right=3mm,top=5.3mm,bottom=2mm,
+  before skip=8pt,after skip=8pt,
+  before upper={\setlength{\parindent}{1em}\indent},
+  title={補足｜#1},
+  coltitle=cyan,colbacktitle=white,
+  fonttitle=\sffamily\bfseries\small,
+  boxed title style={boxrule=0pt,frame hidden,colback=white},
+  attach boxed title to top left={xshift=0mm,yshift=-0.5mm}}
+
+% Short Python code bridging a derived formula and the complete Notebook.
+\newtcolorbox{listingbox}[2][]{
+  enhanced,
+  colback=listingbg,colframe=listingframe,boxrule=0.45pt,arc=0pt,
+  left=2.8mm,right=2.8mm,top=6mm,bottom=2.5mm,
+  before skip=8pt,after skip=8pt,
+  overlay unbroken and first={
+    \node[anchor=north west,fill=white,text=navy,
+      font=\sffamily\bfseries\small,inner xsep=2.0mm,inner ysep=0.7mm]
+      at ([xshift=1.2mm]frame.north west) {Listing #2};
+  },#1}
+
+
+% Compact source syntax; rendered as the scoped Notebook block.
+\newcommand{\notebooktag}[2]{%
+  \begin{notebookblock}{#1}#2\end{notebookblock}}
+
+\titleformat{\chapter}{\LARGE\bfseries\sffamily\color{navy}}{第\thechapter 章}{0.8em}{}
+\titleformat{\section}{\large\bfseries\sffamily\color{navy}}{\thesection}{0.5em}{}
+\titleformat{\subsection}{\normalsize\bfseries\sffamily\color{navy}}{}{0pt}{}
+\titlespacing*{\chapter}{0pt}{0pt}{12pt}
+\titlespacing*{\section}{0pt}{1.1em}{0.4em}
+\titlespacing*{\subsection}{0pt}{0.75em}{0.25em}
+
+\setlist[itemize]{leftmargin=1.7em,itemsep=0.15em,topsep=0.25em}
+\setlist[enumerate]{leftmargin=2em,itemsep=0.15em,topsep=0.25em}
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{1}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\scriptsize\sffamily 銀河力学で学ぶ数値計算法}
+\fancyhead[R]{\scriptsize\sffamily\nouppercase{\leftmark}}
+\makeatletter
+\renewcommand{\chaptermark}[1]{\markboth{第\thechapter 章\enspace #1}{}}
+\makeatother
+\fancyfoot[R]{\small\thepage}
+\fancypagestyle{plain}{
+  \fancyhf{}\fancyfoot[R]{\small\thepage}\renewcommand{\headrulewidth}{0pt}}
+
+\newcommand{\unit}[1]{\,\mathrm{#1}}
+\newcommand{\dd}{\mathrm{d}}
+\renewcommand{\contentsname}{目次}
+\renewcommand{\figurename}{図}
+\renewcommand{\tablename}{表}
+\renewcommand{\bibname}{参考図書}
+\renewcommand{\thefigure}{\thechapter.\arabic{figure}}
+\renewcommand{\thetable}{\thechapter.\arabic{table}}
+\renewcommand{\theequation}{\thechapter.\arabic{equation}}
+
+\renewcommand{\topfraction}{0.95}
+\renewcommand{\bottomfraction}{0.85}
+\renewcommand{\textfraction}{0.05}
+\renewcommand{\floatpagefraction}{0.85}
+\setcounter{topnumber}{3}
+\setcounter{totalnumber}{5}
+\setlength{\textfloatsep}{10pt plus 3pt minus 2pt}
+\setlength{\intextsep}{10pt plus 3pt minus 2pt}
+
+\usepackage[unicode,colorlinks=true,linkcolor=cyan,citecolor=cyan,urlcolor=cyan]{hyperref}

@@ -1,0 +1,5 @@
+# Student notebooks
+numpy
+scipy
+matplotlib
+jupyterlab

@@ -1,0 +1,26 @@
+{
+  "notebook": "ryden_ch6_notebook1_spherical_mass_models.ipynb",
+  "code_sha256": "54f850f52d6b8bbefebff9f04e05560396bb403b589b13c2fe8f23fcb56da168",
+  "value_sources": {
+    "choneMExactA": "m_exact_eval",
+    "choneLeftNForty": "m_left",
+    "choneMidNForty": "m_mid",
+    "choneTrapNForty": "m_trap",
+    "choneSimpsonNForty": "m_simp",
+    "choneLeftErrNForty": "m_left - m_exact_eval",
+    "choneMidErrNForty": "m_mid - m_exact_eval",
+    "choneTrapErrNForty": "m_trap - m_exact_eval",
+    "choneSimpsonErrNForty": "m_simp - m_exact_eval",
+    "choneOrderLeft": "orders[Left rectangle]",
+    "choneOrderMid": "orders[Midpoint]",
+    "choneOrderTrap": "orders[Trapezoidal]",
+    "choneOrderSimpson": "orders[Simpson]",
+    "choneMachineEps": "numpy float epsilon",
+    "choneMassRmaxTwentyNum": "m_num[-1]",
+    "choneMassRmaxTwentyExact": "m_exact[-1]",
+    "choneVcPeakRadiusNumerical": "r[i_peak]/a",
+    "choneVcPeakNumerical": "vc_num[i_peak]",
+    "choneVcPeakRadiusAnalytic": "analytic sqrt(2)",
+    "choneVcPeakAnalytic": "analytic normalized maximum"
+  }
+}
