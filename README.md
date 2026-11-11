@@ -14,9 +14,7 @@
 
 **[銀河力学で学ぶ数値計算法 — 配布版 v1.3（PDF）](docs/galactic_dynamics_numerical_methods_v1.3.pdf)**
 
-旧版： [配布版 v1.2（PDF）](docs/galactic_dynamics_numerical_methods_v1.2.pdf)
-
-v1.3は全115ページ。本編3章と付録A〜Fから構成されます。新設の付録E・Fは本編と付録A〜Dの後に追加したため、既存の演習に対応するPDFページ番号はv1.2から変更ありません。
+PDFは全115ページ。本編3章と付録A〜Fから構成されます。
 
 ## 目次・Jupyter Notebook
 
@@ -31,8 +29,8 @@ Notebookには**学生用のコード入力版**と、コード・実行結果�
 | 付録B 軸対称Poisson方程式の数値解法 | 2次元有限差分、疎行列、格子収束 | [Notebook B](notebooks/student/ryden_notebookB_axisymmetric_poisson.ipynb) | [完全版](notebooks/complete/ryden_notebookB_axisymmetric_poisson.ipynb) |
 | 付録C 軸対称・非軸対称ポテンシャル中の軌道 | エピサイクル運動、軌道積分 | [Notebook C](notebooks/student/ryden_notebookC_axisymmetric_nonaxisymmetric_orbits.ipynb) | [完全版](notebooks/complete/ryden_notebookC_axisymmetric_nonaxisymmetric_orbits.ipynb) |
 | 付録D 連立一次方程式の解法 | Gauss消去法、LU分解、Jacobi法 | — | — |
-| 付録E 数学公式集 | 数学公式の参照（v1.3で追加） | — | — |
-| 付録F 単位換算と物理定数 | SI・cgs単位系、物理・天文定数（v1.3で追加） | — | — |
+| 付録E 数学公式集 | 数学公式の参照 | — | — |
+| 付録F 単位換算と物理定数 | SI・cgs単位系、物理・天文定数 | — | — |
 
 **注意：** `notebooks/student/` はコード入力欄を残した演習版です。未入力セルの `raise NotImplementedError(...)` による停止は仕様です。解答例・保存済み出力を確認したい場合は `notebooks/complete/` を利用してください。
 
@@ -47,7 +45,7 @@ python -m pip install -r requirements-student.txt
 jupyter lab
 ```
 
-必要なパッケージは主にNumPy、SciPy、Matplotlibです。学生用の環境では [requirements-student.txt](requirements-student.txt) を使用してください。完全実装版の再実行・検証に使ったライブラリのバージョンは [requirements.txt](requirements.txt) に記録しています（Python 3.13.5での検証記録）。
+必要なパッケージは主にNumPy、SciPy、Matplotlibです。学生用の環境では [requirements-student.txt](requirements-student.txt) を使用してください。完全実装版の実行環境は [requirements.txt](requirements.txt) を参照してください。
 
 ## LaTeXソース
 
@@ -61,19 +59,13 @@ jupyter lab
 - [generated/](textbook/generated/)：数値結果とLaTeXマクロ
 - [scripts/](scripts/)：図生成の関連スクリプト（リポジトリのルートに配置）
 
-XeLaTeXで組版します。ソースのディレクトリ構成を維持した状態で、`textbook/` を作業ディレクトリとして `xelatex main.tex` を実行してください。目次と参照を確定するには複数回の実行が必要です。v1.3の原稿はXeLaTeXで3回の組版を確認済みです（A4、115ページ）。
+XeLaTeXで組版します。ソースのディレクトリ構成を維持した状態で、`textbook/` を作業ディレクトリとして `xelatex main.tex` を実行してください。目次と参照を確定するには複数回の実行が必要です。
 
 図生成スクリプトは `notebooks/complete/` の完全実装版を参照します。図・数値マクロの一括再生成コマンドは `python scripts/generate_all_figures.py` です。実行環境が異なる場合は計算結果や図の差異を検証してください。
 
-## 公開範囲
-
-このリポジトリには、**学生用Notebook・完全実装版Notebook・教科書PDF・LaTeX組版ソース**を含めています。完全実装版はコードと保存済みの出力を含みます。macOSの補助ファイルや不要な重複Notebookは含めていません。
-
-## ライセンス・引用について
+## ライセンス
 
 **再利用ライセンスは現在未設定です。** Publicリポジトリであることだけでは、第三者による複製・改変・再配布を許諾するものではありません。教材とプログラムのライセンスについては [LICENSE_DECISION.md](LICENSE_DECISION.md) を参照してください。
-
-市販教科書のPDFなど、再配布が許可されていない第三者資料は含まれていません。掲載した図・ソースの権利関係と動作環境に関する確認事項は [PUBLISHING_CHECKLIST.md](docs/PUBLISHING_CHECKLIST.md) にまとめています。
 
 ## お問い合わせ
 
