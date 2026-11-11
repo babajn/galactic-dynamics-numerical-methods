@@ -1,0 +1,276 @@
+% Appendix F: 単位換算と物理定数
+% SI単位系・CODATA 2022・IAU名目値に基づく演習用参照表。
+% 既存の本文で \appendix を宣言し、付録 E に続けて \input する。
+% 必要パッケージ: amsmath, booktabs, longtable, array, titlesec, needspace
+\begingroup
+\titlespacing*{\chapter}{0pt}{0pt}{6pt}
+\titlespacing*{\section}{0pt}{0.62em}{0.20em}
+\small
+\linespread{1.0}\selectfont
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{1.5pt}
+\renewcommand{\arraystretch}{1.00}
+\setlength{\LTpre}{3pt}
+\setlength{\LTpost}{3pt}
+\chapter{単位換算と物理定数}\label{app:units-constants}
+
+本付録では、数値計算演習で用いる単位換算、物理定数、天文定数をまとめる。
+単位・物理定数は原則として現在のSI定義、CODATA 2022、およびIAUの名目値を用いる。
+「厳密」は定義値、それ以外の数値は表記桁での近似である。
+
+\section{単位換算表（SI・cgs）}\label{sec:app-unit-sicgs}
+{\fontsize{8.7pt}{10.3pt}\selectfont
+\begin{longtable}{@{}p{1.75cm}p{2.55cm}p{1.05cm}p{3.62cm}p{3.55cm}p{2.90cm}@{}}
+\toprule
+物理量 & 単位 & 記号 & SI単位など & cgs単位など & 備考 \\
+\midrule
+\endfirsthead
+\multicolumn{6}{@{}l}{\small\itshape 単位換算表（続き）}\\
+\toprule
+物理量 & 単位 & 記号 & SI単位など & cgs単位など & 備考 \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+長さ & メートル & m & $1\,\mathrm m$ & $10^2\,\mathrm{cm}$ & \\
+ & マイクロメートル & $\mu\mathrm m$ & $10^{-6}\,\mathrm m$ & $10^{-4}\,\mathrm{cm}$ & 旧称：ミクロン \\
+ & オングストローム & \AA & $10^{-10}\,\mathrm m$ & $10^{-8}\,\mathrm{cm}$ & \\
+ & 天文単位 & au & $1.495978707\times10^{11}\,\mathrm m$ & & 厳密な定義値 \\
+ & 光年 & ly & $9.46073\times10^{15}\,\mathrm m$ & & ユリウス年で定義 \\
+ & パーセク & pc & $3.08568\times10^{16}\,\mathrm m$ & & \\
+平面角 & ラジアン & rad & $1\,\mathrm{rad}$ & & $180^\circ=\pi\,\mathrm{rad}$ \\
+ & 度 & $^\circ$ & $\pi/180\,\mathrm{rad}$ & & \\
+ & 分・角分 & $'$ & $\pi/10800\,\mathrm{rad}$ & & \\
+ & 秒・角秒 & $''$ & $4.84814\times10^{-6}\,\mathrm{rad}$ & & $\pi/648000\,\mathrm{rad}$ \\
+ & ミリ秒角 & mas & $4.84814\times10^{-9}\,\mathrm{rad}$ & & $10^{-3}$ 秒角 \\
+立体角 & ステラジアン & sr & $1\,\mathrm{sr}$ & & 全立体角 $4\pi\,\mathrm{sr}$ \\
+質量 & キログラム & kg & $1\,\mathrm{kg}$ & $10^3\,\mathrm g$ & \\
+時間 & 秒 & s & $1\,\mathrm s$ & & \\
+ & 分 & min & $60\,\mathrm s$ & & \\
+ & 時 & h & $3.6\times10^3\,\mathrm s$ & & \\
+ & 日 & d & $8.64\times10^4\,\mathrm s$ & & \\
+ & 年 & yr & $3.15576\times10^7\,\mathrm s$ & & ユリウス年 \\
+振動数 & ヘルツ & Hz & $1\,\mathrm{s^{-1}}$ & & \\
+力 & ニュートン & N & $1\,\mathrm{kg\,m\,s^{-2}}$ & $10^5\,\mathrm{dyn}$ & \\
+ & ダイン & dyn & $10^{-5}\,\mathrm N$ & $1\,\mathrm{g\,cm\,s^{-2}}$ & \\
+圧力 & パスカル & Pa & $1\,\mathrm{N\,m^{-2}}$ & $10\,\mathrm{dyn\,cm^{-2}}$ & \\
+エネルギー & ジュール & J & $1\,\mathrm{N\,m}$ & $10^7\,\mathrm{erg}$ & \\
+ & エルグ & erg & $10^{-7}\,\mathrm J$ & $1\,\mathrm{dyn\,cm}$ & \\
+ & 電子ボルト & eV & $1.60218\times10^{-19}\,\mathrm J$ & $1.60218\times10^{-12}\,\mathrm{erg}$ & \\
+熱量 & カロリー & cal & $4.184\,\mathrm J$ & & 熱化学カロリー \\
+仕事率 & ワット & W & $1\,\mathrm{J\,s^{-1}}$ & $10^7\,\mathrm{erg\,s^{-1}}$ & 光度と同じ次元 \\
+電流 & アンペア & A & $1\,\mathrm A$ & & \\
+電荷 & クーロン & C & $1\,\mathrm{A\,s}$ & & \\
+電圧 & ボルト & V & $1\,\mathrm{J\,C^{-1}}$ & & \\
+電気抵抗 & オーム & $\Omega$ & $1\,\mathrm{V\,A^{-1}}$ & & \\
+磁束 & ウェーバー & Wb & $1\,\mathrm{V\,s}$ & & \\
+磁束密度 & テスラ & T & $1\,\mathrm{Wb\,m^{-2}}$ & $10^4\,\mathrm G$ & \\
+ & ガウス & G & $10^{-4}\,\mathrm T$ & $1\,\mathrm G$ & cgs-Gauss系 \\
+温度 & ケルビン & K & $T/\mathrm K=t/{}^\circ\mathrm C+273.15$ & & $t$ は摂氏温度 \\
+光度(測光) & カンデラ & cd & $1\,\mathrm{cd}$ & & luminous intensity \\
+光束 & ルーメン & lm & $1\,\mathrm{cd\,sr}$ & & \\
+照度 & ルクス & lx & $1\,\mathrm{lm\,m^{-2}}$ & & \\
+物質量 & モル & mol & $1\,\mathrm{mol}$ & & \\
+フラックス密度 & ジャンスキー & Jy & $10^{-26}\,\mathrm{W\,m^{-2}\,Hz^{-1}}$ & $10^{-23}\,\mathrm{erg\,s^{-1}\,cm^{-2}\,Hz^{-1}}$ & \\
+\end{longtable}
+}
+\noindent\footnotesize\textit{注：}ガウスのGと重力定数の$G$は別の意味である。電磁気のSIとcgs-Gauss系では、単位間の関係が力学量ほど単純でない場合がある。\normalsize
+
+\Needspace{8\baselineskip}
+\section{エネルギー換算表}\label{sec:app-unit-energy}
+{\fontsize{9pt}{10.6pt}\selectfont
+\begin{tabular}{@{}p{4.2cm}p{4.15cm}p{3.75cm}p{3.25cm}@{}}
+\toprule
+項目 & SI単位など & cgs単位など & 関係式 \\
+\midrule
+$1\,\mathrm{eV}$ & $1.602176634\times10^{-19}\,\mathrm J$ & $1.60218\times10^{-12}\,\mathrm{erg}$ & $E$ \\
+角波数 $k$（$1\,\mathrm{eV}$相当） & $5.06773\times10^6\,\mathrm{m^{-1}}$ & $5.06773\times10^4\,\mathrm{cm^{-1}}$ & $k=E/(\hbar c)$ \\
+波長 $\lambda$（$1\,\mathrm{eV}$相当） & $1.23984\times10^{-6}\,\mathrm m$ & $1.23984\times10^{-4}\,\mathrm{cm}$ & $\lambda=hc/E$ \\
+振動数 $\nu$（$1\,\mathrm{eV}$相当） & $2.41799\times10^{14}\,\mathrm{Hz}$ & & $\nu=E/h$ \\
+温度 $T$（$1\,\mathrm{eV}$相当） & $1.16045\times10^4\,\mathrm K$ & & $T=E/k_{\mathrm B}$ \\
+原子質量単位のエネルギー & $931.494\,\mathrm{MeV}$ & $1.49242\times10^{-3}\,\mathrm{erg}$ & $m_{\mathrm u}c^2$ \\
+陽子の静止エネルギー & $938.272\,\mathrm{MeV}$ & & $m_pc^2$ \\
+電子の静止エネルギー & $510.999\,\mathrm{keV}$ & $8.18711\times10^{-7}\,\mathrm{erg}$ & $m_ec^2$ \\
+\bottomrule
+\end{tabular}
+}
+\par\noindent\footnotesize\textit{注：}角波数、波長、振動数、温度の各値は$E=1\,\mathrm{eV}$に対応する。角波数は$k=2\pi/\lambda$とした。\normalsize
+
+\Needspace{8\baselineskip}
+\section{天体の大きさ}\label{sec:app-unit-sizes}
+{\fontsize{9pt}{11pt}\selectfont
+\begin{tabular}{@{}p{2.25cm}p{5.15cm}p{4.15cm}p{3.75cm}@{}}
+\toprule
+代表スケール & 対応する天体・距離 & 長さ & 光の通過時間 \\
+\midrule
+$1\,R_\oplus$ & 地球の赤道半径 & $6.3781\times10^6\,\mathrm m$ & 約$0.02\,\mathrm s$ \\
+$1\,R_\odot$ & 太陽半径 & $6.957\times10^8\,\mathrm m$ & 約$2.3\,\mathrm s$ \\
+$1\,\mathrm{au}$ & 太陽--地球間の距離 & $1.4960\times10^{11}\,\mathrm m$ & 約$500\,\mathrm s$ \\
+$100\,\mathrm{au}$ & 太陽系の大きさの目安 & $1.4960\times10^{13}\,\mathrm m$ & 約$5.0\times10^4\,\mathrm s$ \\
+$1\,\mathrm{pc}$ & 近傍恒星間の距離の目安 & $3.0857\times10^{16}\,\mathrm m$ & 約$3.26\,\mathrm{yr}$ \\
+$10\,\mathrm{kpc}$ & 銀河のサイズの目安 & $3.0857\times10^{20}\,\mathrm m$ & 約$3.26\times10^4\,\mathrm{yr}$ \\
+$1\,\mathrm{Mpc}$ & 銀河間距離の目安 & $3.0857\times10^{22}\,\mathrm m$ & 約$3.26\times10^6\,\mathrm{yr}$ \\
+$3\,\mathrm{Gpc}$ & 宇宙論的距離の一例 & $9.2570\times10^{25}\,\mathrm m$ & 約$9.78\times10^9\,\mathrm{yr}$ \\
+\bottomrule
+\end{tabular}
+}
+\par\noindent\footnotesize\textit{注：}光の通過時間は静的な距離$L$に対して$L/c$を示したもので、宇宙膨張を含む光行時間ではない。$1\,\mathrm{kpc}=10^3\,\mathrm{pc}$、$1\,\mathrm{Mpc}=10^6\,\mathrm{pc}$、$1\,\mathrm{Gpc}=10^9\,\mathrm{pc}$。\normalsize
+
+\Needspace{8\baselineskip}
+\section{密度と対応する天体}\label{sec:app-unit-densities}
+{\fontsize{9pt}{10.8pt}\selectfont
+\begin{tabular}{@{}p{3.45cm}p{3.45cm}p{3.45cm}p{5.0cm}@{}}
+\toprule
+質量密度（SI） & 質量密度（cgs） & 個数密度（SI） & 代表的な環境 \\
+\midrule
+$10^{-27}\,\mathrm{kg\,m^{-3}}$ & $10^{-30}\,\mathrm{g\,cm^{-3}}$ & $1\,\mathrm{m^{-3}}$ & 宇宙の平均密度の目安 \\
+$10^{-24}\,\mathrm{kg\,m^{-3}}$ & $10^{-27}\,\mathrm{g\,cm^{-3}}$ & $10^{3}\,\mathrm{m^{-3}}$ & 銀河団ガス \\
+$10^{-21}\,\mathrm{kg\,m^{-3}}$ & $10^{-24}\,\mathrm{g\,cm^{-3}}$ & $10^{6}\,\mathrm{m^{-3}}$ & 星間ガス \\
+$10^{-18}\,\mathrm{kg\,m^{-3}}$ & $10^{-21}\,\mathrm{g\,cm^{-3}}$ & $10^{9}\,\mathrm{m^{-3}}$ & 分子雲 \\
+$10^{-12}\,\mathrm{kg\,m^{-3}}$ & $10^{-15}\,\mathrm{g\,cm^{-3}}$ & $10^{15}\,\mathrm{m^{-3}}$ & 太陽コロナ（幅のある目安） \\
+$10^{-4}\,\mathrm{kg\,m^{-3}}$ & $10^{-7}\,\mathrm{g\,cm^{-3}}$ & $10^{23}\,\mathrm{m^{-3}}$ & 太陽光球（代表的な桁） \\
+$10^{-3}\,\mathrm{kg\,m^{-3}}$ & $10^{-6}\,\mathrm{g\,cm^{-3}}$ & $10^{24}\,\mathrm{m^{-3}}$ & 赤色巨星の平均密度（$M=1\,M_\odot$, $R=100\,R_\odot$ の例） \\
+$10^{3}\,\mathrm{kg\,m^{-3}}$ & $1\,\mathrm{g\,cm^{-3}}$ & $10^{30}\,\mathrm{m^{-3}}$ & 太陽の平均密度 \\
+$10^{5}\,\mathrm{kg\,m^{-3}}$ & $10^{2}\,\mathrm{g\,cm^{-3}}$ & $10^{32}\,\mathrm{m^{-3}}$ & 太陽中心（約$150\,\mathrm{g\,cm^{-3}}$） \\
+$10^{9}\,\mathrm{kg\,m^{-3}}$ & $10^{6}\,\mathrm{g\,cm^{-3}}$ & $10^{36}\,\mathrm{m^{-3}}$ & 白色矮星の内部 \\
+$10^{17}\,\mathrm{kg\,m^{-3}}$ & $10^{14}\,\mathrm{g\,cm^{-3}}$ & $10^{44}\,\mathrm{m^{-3}}$ & 中性子星の内部 \\
+\bottomrule
+\end{tabular}
+}
+\par\noindent\footnotesize\textit{注：}個数密度は粒子1個の質量を約$10^{-27}\,\mathrm{kg}$とみなした概数である。密度は代表的な桁の目安であり、同じ種類の天体でも半径や進化段階によって大きく変わる。\normalsize
+
+\Needspace{8\baselineskip}
+\section{基礎物理定数}\label{sec:app-unit-constants}
+{\fontsize{8.8pt}{10.5pt}\selectfont
+\begin{longtable}{@{}p{4.0cm}p{1.4cm}p{5.75cm}p{4.45cm}@{}}
+\toprule
+名称 & 記号 & SI単位での値 & cgs単位など \\
+\midrule
+\endfirsthead
+\multicolumn{4}{@{}l}{\small\itshape 基礎物理定数（続き）}\\
+\toprule
+名称 & 記号 & SI単位での値 & cgs単位など \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+真空中の光速 & $c$ & $2.99792458\times10^8\,\mathrm{m\,s^{-1}}$（厳密） & $2.99792458\times10^{10}\,\mathrm{cm\,s^{-1}}$ \\
+万有引力定数 & $G$ & $6.67430(15)\times10^{-11}\,\mathrm{m^3\,kg^{-1}\,s^{-2}}$ & $6.67430\times10^{-8}\,\mathrm{dyn\,cm^2\,g^{-2}}$ \\
+プランク定数 & $h$ & $6.62607015\times10^{-34}\,\mathrm{J\,s}$（厳密） & $6.62607015\times10^{-27}\,\mathrm{erg\,s}$ \\
+換算プランク定数 & $\hbar$ & $1.054571817\times10^{-34}\,\mathrm{J\,s}$ & $1.054571817\times10^{-27}\,\mathrm{erg\,s}$ \\
+ボルツマン定数 & $k_{\mathrm B}$ & $1.380649\times10^{-23}\,\mathrm{J\,K^{-1}}$（厳密） & $1.380649\times10^{-16}\,\mathrm{erg\,K^{-1}}$ \\
+原子質量単位 & $m_{\mathrm u}$ & $1.66053907\times10^{-27}\,\mathrm{kg}$ & $1.66053907\times10^{-24}\,\mathrm g$ \\
+陽子の質量 & $m_p$ & $1.6726219\times10^{-27}\,\mathrm{kg}$ & $1.6726219\times10^{-24}\,\mathrm g$ \\
+電子の質量 & $m_e$ & $9.1093837\times10^{-31}\,\mathrm{kg}$ & $9.1093837\times10^{-28}\,\mathrm g$ \\
+素電荷 & $e$ & $1.602176634\times10^{-19}\,\mathrm C$（厳密） & $4.8032\times10^{-10}\,\mathrm{statC}$ \\
+アボガドロ定数 & $N_{\mathrm A}$ & $6.02214076\times10^{23}\,\mathrm{mol^{-1}}$（厳密） & \\
+ボーア半径 & $a_0$ & $5.2917721\times10^{-11}\,\mathrm m$ & $5.2917721\times10^{-9}\,\mathrm{cm}$ \\
+古典電子半径 & $r_e$ & $2.8179403\times10^{-15}\,\mathrm m$ & $2.8179403\times10^{-13}\,\mathrm{cm}$ \\
+リュードベリ定数 & $R_\infty$ & $1.0973732\times10^{7}\,\mathrm{m^{-1}}$ & $1.0973732\times10^{5}\,\mathrm{cm^{-1}}$ \\
+陽子のコンプトン波長 & $\lambda_p$ & $1.32141\times10^{-15}\,\mathrm m$ & $1.32141\times10^{-13}\,\mathrm{cm}$ \\
+電子のコンプトン波長 & $\lambda_e$ & $2.42631\times10^{-12}\,\mathrm m$ & $2.42631\times10^{-10}\,\mathrm{cm}$ \\
+\shortstack[l]{シュテファン・\\ボルツマン定数} & $\sigma_{\mathrm{SB}}$ & $5.670374419\times10^{-8}\,\mathrm{W\,m^{-2}\,K^{-4}}$ & $5.6704\times10^{-5}\,\mathrm{erg\,s^{-1}\,cm^{-2}\,K^{-4}}$ \\
+放射定数 & $a_{\mathrm{rad}}$ & $7.5657\times10^{-16}\,\mathrm{J\,m^{-3}\,K^{-4}}$ & $7.5657\times10^{-15}\,\mathrm{erg\,cm^{-3}\,K^{-4}}$ \\
+トムソン散乱断面積 & $\sigma_{\mathrm T}$ & $6.6524587\times10^{-29}\,\mathrm{m^2}$ & $6.6524587\times10^{-25}\,\mathrm{cm^2}$ \\
+\end{longtable}
+}
+\noindent\footnotesize\textit{注：}括弧内は最終桁の標準不確かさを示す。$\hbar=h/(2\pi)$ および $\sigma_{\mathrm{SB}}$ はSIの定義定数から導かれる厳密な値であり、表中では有限桁に丸めている。電荷のcgs表記はGaussian系のstatCである。\normalsize
+
+\Needspace{8\baselineskip}
+\section{基礎天文定数}\label{sec:app-unit-astro}
+{\fontsize{8.8pt}{10.5pt}\selectfont
+\begin{longtable}{@{}p{1.8cm}p{4.15cm}p{2.0cm}p{5.0cm}p{2.6cm}@{}}
+\toprule
+分類 & 名称 & 記号 & 数値・換算 & 備考 \\
+\midrule
+\endfirsthead
+\multicolumn{5}{@{}l}{\small\itshape 基礎天文定数（続き）}\\
+\toprule
+分類 & 名称 & 記号 & 数値・換算 & 備考 \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+長さ & 1メートル & $1\,\mathrm m$ & $6.6846\times10^{-12}\,\mathrm{au}$ & $3.2408\times10^{-17}\,\mathrm{pc}$ \\
+ & 天文単位 & $1\,\mathrm{au}$ & $149597870700\,\mathrm m$ & 厳密 \\
+ & 光年 & $1\,\mathrm{ly}$ & $9.4607305\times10^{15}\,\mathrm m$ & $0.30660\,\mathrm{pc}$ \\
+ & パーセク & $1\,\mathrm{pc}$ & $3.0856776\times10^{16}\,\mathrm m$ & $3.26156\,\mathrm{ly}$ \\
+時間 & ユリウス年 & $\mathrm{yr}$ & $365.25\,\mathrm d=31557600\,\mathrm s$ & 厳密 \\
+ & 太陽年（回帰年） & & 約$365.2422\,\mathrm d$ & 暦の基準 \\
+ & 恒星年 & & 約$365.2564\,\mathrm d$ & \\
+地球 & 赤道半径 & $R_\oplus$ & $6.3781\times10^6\,\mathrm m$ & IAU名目値 \\
+ & 質量 & $M_\oplus$ & 約$5.9722\times10^{24}\,\mathrm{kg}$ & \\
+ & 平均密度 & $\bar\rho_\oplus$ & 約$5.51\times10^3\,\mathrm{kg\,m^{-3}}$ & \\
+ & 表面重力加速度 & $g_\oplus$ & 約$9.81\,\mathrm{m\,s^{-2}}$ & \\
+ & 脱出速度 & $v_{\mathrm{esc},\oplus}$ & 約$11.2\,\mathrm{km\,s^{-1}}$ & \\
+太陽 & 半径 & $R_\odot$ & $6.957\times10^8\,\mathrm m$ & IAU名目値 \\
+ & 質量 & $M_\odot$ & 約$1.9884\times10^{30}\,\mathrm{kg}$ & 非定義値 \\
+ & 平均密度 & $\bar\rho_\odot$ & 約$1.41\times10^3\,\mathrm{kg\,m^{-3}}$ & \\
+ & 表面重力加速度 & $g_\odot$ & 約$2.74\times10^2\,\mathrm{m\,s^{-2}}$ & \\
+ & 脱出速度 & $v_{\mathrm{esc},\odot}$ & 約$618\,\mathrm{km\,s^{-1}}$ & \\
+ & 光度 & $L_\odot$ & $3.828\times10^{26}\,\mathrm W$ & IAU名目値 \\
+ & 有効温度 & $T_{\mathrm{eff},\odot}$ & 約$5772\,\mathrm K$ & \\
+ & 実視等級 & $m_V$ & 約$-26.74$ & \\
+ & 実視絶対等級 & $M_V$ & 約$+4.83$ & \\
+ & 放射絶対等級 & $M_{\mathrm{bol}}$ & 約$+4.74$ & \\
+ & 色指数 & $B-V$ & 約$+0.65$ & \\
+ & 太陽定数 & $S_\odot$ & 約$1.36\,\mathrm{kW\,m^{-2}}$ & 1 auでの放射照度 \\
+太陽--地球 & 平均距離の基準 & $1\,\mathrm{au}$ & $1.4960\times10^{11}\,\mathrm m$ & 定義値の丸め \\
+天の川銀河 & 太陽の銀河中心距離 & $R_0$ & 約$8.2\,\mathrm{kpc}$ & 観測の代表値 \\
+ & 太陽位置の円運動速度 & $\Theta_0$ & $(236\pm7)\,\mathrm{km\,s^{-1}}$ & Reidほか（2019） \\
+宇宙論 & ハッブル定数（CMB） & $H_0$ & $(67.4\pm0.5)\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$ & Planck（2020） \\
+ & ハッブル定数（距離梯子） & $H_0$ & $(73.04\pm1.04)\,\mathrm{km\,s^{-1}\,Mpc^{-1}}$ & Riessほか（2022） \\
+名目値 & 太陽の質量パラメータ & $(GM)_\odot^{\mathrm N}$ & $1.3271244\times10^{20}\,\mathrm{m^3\,s^{-2}}$ & IAU定義値 \\
+換算 & 重力定数 & $G$ & $4.301\times10^{-6}\,\mathrm{kpc\,(km/s)^2}\,M_\odot^{-1}$ & 近似 \\
+ & 時間 & $\mathrm{kpc/(km/s)}$ & $0.97779\,\mathrm{Gyr}$ & \\
+ & 速度と時間 & $1\,\mathrm{km/s}\times\mathrm{Myr}$ & $1.02271\,\mathrm{pc}$ & \\
+ & 固有運動 & $1\,\mathrm{mas/yr}\times\mathrm{kpc}$ & $4.74047\,\mathrm{km/s}$ & 接線速度 \\
+\end{longtable}
+}
+\noindent\footnotesize\textit{注：}銀河・宇宙論パラメータは定義値ではなく、代表的な観測値である。$R_0\simeq8.2\,\mathrm{kpc}$はGRAVITY Collaboration（2021）およびReidほか（2019）を参考とした。$\Theta_0$はReidほか（2019）による。$H_0$はPlanck Collaboration（2020、基本$\Lambda$CDMモデル）とRiessほか（2022、SH0ES）の値を併記した。両者は一致しておらず、単一の確定した推奨値はない。太陽・地球の「名目値」は単位換算の基準として厳密に定められた値であり、実測量の誤差がゼロという意味ではない。太陽質量$M_\odot$は近似値であり、表の質量は$(GM)_\odot^{\mathrm N}/G$（CODATA 2022の$G$）から換算した。軌道運動からは$GM_\odot$の方が高精度に求められる。\normalsize
+
+\Needspace{9\baselineskip}
+\section{ギリシャ文字の読み方と用例}\label{sec:app-unit-greek}
+{\fontsize{9pt}{11pt}\selectfont
+\begin{tabular}{@{}p{0.95cm}p{0.95cm}p{2.15cm}p{3.55cm}@{\hspace{0.40cm}}p{0.95cm}p{0.95cm}p{2.15cm}p{3.55cm}@{}}
+\toprule
+大文字 & 小文字 & 読み方 & 用例 & 大文字 & 小文字 & 読み方 & 用例 \\
+\midrule
+$A$ & $\alpha$ & アルファ & 赤経$\alpha$、水素のH$\alpha$線 & $N$ & $\nu$ & ニュー & 振動数$\nu$ \\
+$B$ & $\beta$ & ベータ & $\beta$崩壊 & $\Xi$ & $\xi$ & クシー、グザイ & 無次元化変数$\xi$ \\
+$\Gamma$ & $\gamma$ & ガンマ & 比熱比$\gamma$ & $O$ & $o$ & オミクロン & 通常はラテン文字$o$と同形 \\
+$\Delta$ & $\delta$ & デルタ & 差分$\Delta$、微小量$\delta$ & $\Pi$ & $\pi$ & パイ & 円周率$\pi$ \\
+$E$ & $\varepsilon$ & イプシロン & 誤差$\varepsilon$ & $P$ & $\rho$ & ロー & 質量密度$\rho$ \\
+$Z$ & $\zeta$ & ゼータ & ゼータ関数$\zeta$ & $\Sigma$ & $\sigma$ & シグマ & 分散$\sigma^2$、面密度$\Sigma$ \\
+$H$ & $\eta$ & イータ、エータ & 効率$\eta$ & $T$ & $\tau$ & タウ & 固有時間$\tau$ \\
+$\Theta$ & $\theta$ & シータ & 角度$\theta$ & $\Upsilon$ & $\upsilon$ & ウプシロン & \textit{Y}や$v$とは別の記号 \\
+$I$ & $\iota$ & イオタ &  & $\Phi$ & $\phi,\varphi$ & ファイ & ポテンシャル$\Phi$、方位角$\phi$ \\
+$K$ & $\kappa$ & カッパ & 吸収係数$\kappa$ & $X$ & $\chi$ & カイ & $\chi^2$検定 \\
+$\Lambda$ & $\lambda$ & ラムダ & 波長$\lambda$、宇宙項$\Lambda$ & $\Psi$ & $\psi$ & プサイ & 波動関数$\psi$ \\
+$M$ & $\mu$ & ミュー & 平均分子量$\mu$ & $\Omega$ & $\omega$ & オメガ & 角振動数$\omega$ \\
+\bottomrule
+\end{tabular}
+}
+\par\noindent\footnotesize\textit{注：}大文字の$\Upsilon$はラテン文字$Y$と、小文字の$\upsilon$はラテン文字$v$と字形が似ているが、別の記号である。大文字$A,B,E,Z,H,I,K,M,N,O,P,T,X$は、対応するラテン文字と同形のものを表した。\normalsize
+
+\Needspace{8\baselineskip}
+\section{10のべき乗を表す接頭語}\label{sec:app-unit-prefixes}
+{\fontsize{9.3pt}{11pt}\selectfont
+\begin{tabular}{@{}lcl@{\hspace{0.85cm}}lcl@{\hspace{0.85cm}}lcl@{}}
+\toprule
+名称 & 記号 & 大きさ & 名称 & 記号 & 大きさ & 名称 & 記号 & 大きさ \\
+\midrule
+クエタ & Q & $10^{30}$ & キロ & k & $10^3$ & ナノ & n & $10^{-9}$ \\
+ロナ & R & $10^{27}$ & ヘクト & h & $10^2$ & ピコ & p & $10^{-12}$ \\
+ヨタ & Y & $10^{24}$ & デカ & da & $10^1$ & フェムト & f & $10^{-15}$ \\
+ゼタ & Z & $10^{21}$ & デシ & d & $10^{-1}$ & アト & a & $10^{-18}$ \\
+エクサ & E & $10^{18}$ & センチ & c & $10^{-2}$ & ゼプト & z & $10^{-21}$ \\
+ペタ & P & $10^{15}$ & ミリ & m & $10^{-3}$ & ヨクト & y & $10^{-24}$ \\
+テラ & T & $10^{12}$ & マイクロ & $\mu$ & $10^{-6}$ & ロント & r & $10^{-27}$ \\
+ギガ & G & $10^9$ &  &  &  & クエクト & q & $10^{-30}$ \\
+メガ & M & $10^6$ &  &  &  &  &  &  \\
+\bottomrule
+\end{tabular}
+}
+\par\noindent\footnotesize\textit{注：}接頭語は大文字・小文字を区別する。2022年に追加されたクエタ、ロナ、ロント、クエクトも含め、$10^{-30}$から$10^{30}$を収録した。\normalsize
+\endgroup
