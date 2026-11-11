@@ -1,5 +1,9 @@
-# Provisional dependencies; versions and optional packages will be confirmed when all notebooks are available.
-numpy
-scipy
-matplotlib
-jupyterlab
+# Packages used to validate the original full-implementation notebooks with Python 3.13.5.
+# For student notebooks, use requirements-student.txt instead.
+numpy==2.3.5
+scipy==1.17.0
+matplotlib==3.10.8
+nbformat==5.10.4
+nbclient==0.10.4
+ipykernel
+sympy==1.14.0
