@@ -1,9 +1,9 @@
-"""Use the distributed, standalone notebooks as the single numerical source.
+"""Use trusted full-implementation notebooks as the numerical source.
 
 Figure scripts execute notebook code in a fresh namespace (without a Jupyter
 kernel), export selected figures at plt.show(), and format values from that same
 execution. No physical solver is reimplemented here. Only trusted local
-notebooks shipped with the project should be executed.
+full-implementation notebooks provided separately should be executed.
 """
 from pathlib import Path
 from dataclasses import dataclass
@@ -18,7 +18,7 @@ import matplotlib.pyplot as plt
 from matplotlib.collections import QuadMesh
 
 ROOT = Path(__file__).resolve().parents[1]
-FIG = ROOT / 'figures'
+FIG = ROOT / 'textbook' / 'figures'
 FIG.mkdir(exist_ok=True)
 PREFIX = {1:'ryden_ch6_notebook1_', 2:'ryden_ch6_notebook2_', 3:'ryden_ch7_notebook3_', 'C':'ryden_notebookC_', 'B':'ryden_notebookB_', 'A':'ryden_notebookA_'}
 
@@ -35,7 +35,9 @@ def notebook_path(number: int | str) -> Path:
 
     Notebook filenames may carry any revision suffix (or none).  The chapter
     prefix is the stable identifier; version strings are deliberately ignored.
-    The sibling notebooks/ directory takes precedence over textbook/notebooks/.
+    The sibling ../notebooks/ directory takes precedence over the root notebooks/.
+    Student notebooks (notebooks/student/) are intentionally excluded: they
+    contain unfilled code cells and cannot be used to regenerate figures.
     """
     if number not in PREFIX:
         raise ValueError(f'Unknown notebook number: {number}')
@@ -58,7 +60,7 @@ def notebook_path(number: int | str) -> Path:
 
     raise FileNotFoundError(
         f'Notebook {number} not found. Expected one file matching {pattern!r} '
-        f'in one of: {", ".join(searched)}'
+        f'in one of: {", ".join(searched)}. The full-implementation notebooks are not public.'
     )
 
 def save_figure(fig, name: str):
@@ -139,7 +141,7 @@ def tex_number(value: float, fmt: str = '.6e') -> str:
 def write_values(chapter: int | str, run: NotebookRun, values: dict):
     """values maps macro names to (value, format, source description)."""
     folder = f'chap{chapter:02d}' if isinstance(chapter, int) else {'B':'appendixB', 'C':'appendixC', 'A':'appendixA'}[chapter]
-    gen=ROOT/'generated'/folder; gen.mkdir(parents=True,exist_ok=True)
+    gen=ROOT/'textbook'/'generated'/folder; gen.mkdir(parents=True,exist_ok=True)
     lines=['% Auto-generated from the distributed notebook. Do not hand-edit.']
     raw={}; origins={}
     for macro,(value,fmt,origin) in values.items():
