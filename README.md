@@ -64,8 +64,8 @@ XeLaTeXで組版します。ソースのディレクトリ構成を維持した�
 図生成スクリプトは `notebooks/complete/` の完全実装版を参照します。図・数値マクロの一括再生成コマンドは `python textbook/scripts/generate_all_figures.py` です。実行環境が異なる場合は計算結果や図の差異を検証してください。
 
 ## 参考資料
+- Barbara Ryden, [*Celestial and Stellar Dynamics*](https://www.cambridge.org/highereducation/books/celestial-and-stellar-dynamics/8EC981C3B1938BFCA749AD76C496C4EC#overview), Cambridge University Press, 2025
 - James Binney & Scott Tremaine, [*Galactic Dynamics*](https://press.princeton.edu/books/paperback/9780691130279/galactic-dynamics), 2nd ed., Princeton University Press, 2008
-  軌道、重力ポテンシャル、無衝突系と緩和。ex05–08の物理的背景。
   
 ## 関連する公開教材
 - 馬場淳一『[銀河相互作用のシミュレーション入門](https://github.com/babajn/galaxy-interaction-course/tree/main)』（Pythonで学ぶ制限三体近似）
