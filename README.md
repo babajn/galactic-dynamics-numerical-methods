@@ -68,7 +68,7 @@ XeLaTeXで組版します。ソースのディレクトリ構成を維持した�
 - James Binney & Scott Tremaine, [*Galactic Dynamics*](https://press.princeton.edu/books/paperback/9780691130279/galactic-dynamics), 2nd ed., Princeton University Press, 2008
   
 ## 関連する公開教材
-- 馬場淳一『[銀河相互作用のシミュレーション入門](https://github.com/babajn/galaxy-interaction-course/tree/main)』（Pythonで学ぶ制限三体近似）
+- 馬場淳一『[銀河相互作用のシミュレーション入門](https://github.com/babajn/galaxy-interaction-course/tree/main)』（制限三体近似の銀河相互作用シミュレーション）
 - 馬場淳一『[シミュレーション天文学：銀河動力学を中心に](https://github.com/babajn/simulation-stellar-dynamics)』（2024年度 総研大講義資料）
 
 ## ライセンス
