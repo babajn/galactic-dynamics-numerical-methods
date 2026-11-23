@@ -22,7 +22,7 @@ Notebookには**学生用のコード入力版**と、コード・実行結果�
 
 | 教材 | 主な内容 | 学生用Notebook | 完全実装版Notebook |
 | --- | --- | --- | --- |
-| 本編・付録共通の補助教材 | Python のエラー8例とその意味・直し方、修正前後のコードと出力 | [Python のエラー例と直し方](notebooks/student/python_error_examples.ipynb) | — |
+| 本編・付録共通の補助教材 | Python のエラー10例とその意味・直し方、修正前後のコードと出力 | [Python のエラー例と直し方](notebooks/student/python_error_examples.ipynb) | — |
 | 第1章 球対称質量モデルと数値積分 | Plummer・Hernquist・NFWモデル、数値積分、誤差、収束次数 | [Notebook 1](notebooks/student/ryden_ch6_notebook1_spherical_mass_models.ipynb) | [完全版](notebooks/complete/ryden_ch6_notebook1_spherical_mass_models.ipynb) |
 | 第2章 Poisson方程式と有限差分法 | 球対称Poisson方程式、境界条件、有限差分、数値微分 | [Notebook 2](notebooks/student/ryden_ch6_notebook2_poisson_equation_and_gravity.ipynb) | [完全版](notebooks/complete/ryden_ch6_notebook2_poisson_equation_and_gravity.ipynb) |
 | 第3章 球対称ポテンシャルと時間積分法 | Euler法、RK4、リープフロッグ法、保存量 | [Notebook 3](notebooks/student/ryden_ch7_notebook3_spherical_orbits.ipynb) | [完全版](notebooks/complete/ryden_ch7_notebook3_spherical_orbits.ipynb) |
