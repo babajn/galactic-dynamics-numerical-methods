@@ -26,9 +26,9 @@ Notebookには**学生用のコード入力版**と、コード・実行結果�
 | 第1章 球対称質量モデルと数値積分 | Plummer・Hernquist・NFWモデル、数値積分、誤差、収束次数 | [Notebook 1](notebooks/student/ryden_ch6_notebook1_spherical_mass_models.ipynb) | [第1章](docs/chap01_lecture_slides.pdf) | [完全版](notebooks/complete/ryden_ch6_notebook1_spherical_mass_models.ipynb) |
 | 第2章 Poisson方程式と有限差分法 | 球対称Poisson方程式、境界条件、有限差分、数値微分 | [Notebook 2](notebooks/student/ryden_ch6_notebook2_poisson_equation_and_gravity.ipynb) | [第2章](docs/chap02_lecture_slides.pdf) | [完全版](notebooks/complete/ryden_ch6_notebook2_poisson_equation_and_gravity.ipynb) |
 | 第3章 球対称ポテンシャルと時間積分法 | Euler法、RK4、リープフロッグ法、保存量 | [Notebook 3](notebooks/student/ryden_ch7_notebook3_spherical_orbits.ipynb) | [第3章](docs/chap03_lecture_slides.pdf) | [完全版](notebooks/complete/ryden_ch7_notebook3_spherical_orbits.ipynb) |
-| 付録A 軸対称円盤の質量積分と回転曲線 | 指数円盤、Mestel円盤、累積積分 | [Notebook A](notebooks/student/ryden_notebookA_exponential_disks.ipynb) | — | [完全版](notebooks/complete/ryden_notebookA_exponential_disks.ipynb) |
-| 付録B 軸対称Poisson方程式の数値解法 | 2次元有限差分、疎行列、格子収束 | [Notebook B](notebooks/student/ryden_notebookB_axisymmetric_poisson.ipynb) | — | [完全版](notebooks/complete/ryden_notebookB_axisymmetric_poisson.ipynb) |
-| 付録C 軸対称・非軸対称ポテンシャル中の軌道 | エピサイクル運動、軌道積分 | [Notebook C](notebooks/student/ryden_notebookC_axisymmetric_nonaxisymmetric_orbits.ipynb) | — | [完全版](notebooks/complete/ryden_notebookC_axisymmetric_nonaxisymmetric_orbits.ipynb) |
+| 付録A 軸対称円盤の質量積分と回転曲線 | 指数円盤、Mestel円盤、累積積分 | [Notebook A](notebooks/student/ryden_notebookA_exponential_disks.ipynb) | [付録A](docs/appendix_a_lecture_slides.pdf) | [完全版](notebooks/complete/ryden_notebookA_exponential_disks.ipynb) |
+| 付録B 軸対称Poisson方程式の数値解法 | 2次元有限差分、疎行列、格子収束 | [Notebook B](notebooks/student/ryden_notebookB_axisymmetric_poisson.ipynb) | [付録B](docs/appendix_b_lecture_slides.pdf) | [完全版](notebooks/complete/ryden_notebookB_axisymmetric_poisson.ipynb) |
+| 付録C 軸対称・非軸対称ポテンシャル中の軌道 | エピサイクル運動、軌道積分 | [Notebook C](notebooks/student/ryden_notebookC_axisymmetric_nonaxisymmetric_orbits.ipynb) | [付録C](docs/appendix_c_lecture_slides.pdf) | [完全版](notebooks/complete/ryden_notebookC_axisymmetric_nonaxisymmetric_orbits.ipynb) |
 | 付録D 連立一次方程式の解法 | Gauss消去法、LU分解、Jacobi法 | — | — | — |
 | 付録E 数学公式集 | 数学公式の参照 | — | — | — |
 | 付録F 単位換算と物理定数 | SI・cgs単位系、物理・天文定数 | — | — | — |
