@@ -16,9 +16,13 @@
 
 PDFは全115ページ。本編3章と付録A〜Fから構成されます。
 
-## Python入門スライド
+## 授業スライド
 
-PythonやJupyter Notebookを初めて使う方は、演習前にセルの実行、関数の使い方、NumPy・Matplotlibの読み込み方を確認できます。[Python入門スライド（PDF）](docs/python_basics_slides.pdf)
+- PythonやJupyter Notebookを初めて使う方は、演習前にセルの実行、関数の使い方、NumPy・Matplotlibの読み込み方を確認できます。[Python入門（PDF）](docs/python_basics_slides.pdf)
+- [第1章 球対称質量モデルと数値積分（PDF）](docs/chap01_lecture_slides.pdf)
+- [第2章 Poisson方程式と有限差分法（PDF）](docs/chap02_lecture_slides.pdf)
+- [第3章 球対称ポテンシャルと時間積分法（PDF）](docs/chap03_lecture_slides.pdf)
+- 演習中にエラーが出たときは、エラーの意味と修正例を確認できます。[Pythonのエラー例と直し方（PDF）](docs/python_error_examples_slides.pdf)
 
 ## 目次・Jupyter Notebook
 
