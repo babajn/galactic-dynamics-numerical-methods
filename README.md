@@ -16,6 +16,10 @@
 
 PDFは全115ページ。本編3章と付録A〜Fから構成されます。
 
+## Python入門スライド
+
+PythonやJupyter Notebookを初めて使う方は、演習前にセルの実行、関数の使い方、NumPy・Matplotlibの読み込み方を確認できます。[Python入門スライド（PDF）](docs/python_basics_slides.pdf)
+
 ## 目次・Jupyter Notebook
 
 Notebookには**学生用のコード入力版**と、コード・実行結果を含む**完全実装版**を収録しています。対応するコードの掲載ページは [INPUT_MAP.md](docs/INPUT_MAP.md) を参照してください。
